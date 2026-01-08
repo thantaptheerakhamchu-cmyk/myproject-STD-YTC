@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับเรา - วิทยาลัยเทคนิคยะลา</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Sarabun', sans-serif; background-color: #f8f9fa; }
+        
+        /* Navbar (เหมือนหน้าแรก) */
+        .navbar-brand { font-weight: 600; color: #0d6efd !important; }
+
+        /* Hero Header */
+        .page-header {
+            background: linear-gradient(135deg, #0d6efd 0%, #0043a8 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* ลูกเล่นตัดมุมเฉียง */
+        }
+
+        /* Infographic Cards (Interactive) */
+        .info-card {
+            border: none;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: white;
+            overflow: hidden;
+        }
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .info-card .icon-box {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #0d6efd;
+        }
+        .info-card:hover .icon-box {
+            color: #ffc107; /* เปลี่ยนสีไอคอนเมื่อเอาเมาส์ชี้ */
+        }
+
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 3px solid #dee2e6;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 20px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: #0d6efd;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #0d6efd;
+        }
+        .timeline-year {
+            font-weight: bold;
+            color: #0d6efd;
+            font-size: 1.2rem;
+        }
+
+        /* Stat Counter Box */
+        .stat-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .stat-box:hover {
+            transform: scale(1.05);
+            background: #0d6efd;
+            color: white;
+        }
+        .stat-box:hover h2, .stat-box:hover p { color: white; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-university me-2"></i>วิทยาลัยเทคนิคยะลา
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Page-about.html">เกี่ยวกับเรา</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">หลักสูตร</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="fw-bold display-5">ประวัติและข้อมูลวิทยาลัย</h1>
+            <p class="lead opacity-75">เส้นทางแห่งการสร้างคน สร้างอาชีพ สู่อนาคตที่ยั่งยืน</p>
+        </div>
+    </header>
+
+    <div class="container mb-5">
+        
+        <div class="row g-4 text-center mb-5">
+            <div class="col-md-4">
+                <div class="info-card p-4 h-100 shadow-sm">
+                    <div class="icon-box"><i class="fas fa-eye"></i></div>
+                    <h4 class="fw-bold">วิสัยทัศน์</h4>
+                    <p class="text-muted">"เป็นผู้นำด้านวิชาชีพ นวัตกรรม และเทคโนโลยี สู่มาตรฐานสากล"</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-card p-4 h-100 shadow-sm">
+                    <div class="icon-box"><i class="fas fa-bullseye"></i></div>
+                    <h4 class="fw-bold">พันธกิจ</h4>
+                    <p class="text-muted">มุ่งเน้นการจัดการเรียนการสอนที่ทันสมัย พัฒนาผู้เรียนให้มีทักษะและคุณธรรม</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-card p-4 h-100 shadow-sm">
+                    <div class="icon-box"><i class="fas fa-seedling"></i></div>
+                    <h4 class="fw-bold">เอกลักษณ์</h4>
+                    <p class="text-muted">"ทักษะเยี่ยม เปี่ยมคุณธรรม ล้ำเลิศปัญญา"</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 text-muted">
+
+        <div class="row mb-5">
+            <div class="col-12 text-center mb-4">
+                <h2 class="fw-bold">ข้อมูลเชิงสถิติ</h2>
+                <p class="text-muted">ศักยภาพและความพร้อมของวิทยาลัยเทคนิคยะลา</p>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="stat-box">
+                    <h2 class="display-4 fw-bold text-primary">85+</h2>
+                    <p class="text-muted mb-0">ปีที่ก่อตั้ง</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="stat-box">
+                    <h2 class="display-4 fw-bold text-success">3,500+</h2>
+                    <p class="text-muted mb-0">นักศึกษา</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="stat-box">
+                    <h2 class="display-4 fw-bold text-warning">200+</h2>
+                    <p class="text-muted mb-0">บุคลากรครู</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <div class="stat-box">
+                    <h2 class="display-4 fw-bold text-danger">15+</h2>
+                    <p class="text-muted mb-0">แผนกวิชา</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 text-muted">
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="fw-bold mb-4 text-center"><i class="fas fa-history me-2"></i>เส้นทางประวัติศาสตร์</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-year">พ.ศ. 2481</span>
+                        <h5 class="fw-bold mt-1">จุดเริ่มต้น</h5>
+                        <p class="text-muted">ก่อตั้งขึ้นครั้งแรกในชื่อ "โรงเรียนช่างไม้ยะลา" มุ่งเน้นสอนวิชาชีพช่างไม้ก่อสร้างให้กับเยาวชนในพื้นที่</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">พ.ศ. 2502</span>
+                        <h5 class="fw-bold mt-1">เปลี่ยนชื่อเป็น "โรงเรียนการช่างยะลา"</h5>
+                        <p class="text-muted">ขยายหลักสูตรการสอนเพิ่มขึ้น ครอบคลุมช่างยนต์ และช่างไฟฟ้า เพื่อรองรับการพัฒนาเมือง</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">พ.ศ. 2522</span>
+                        <h5 class="fw-bold mt-1">ยกฐานะเป็น "วิทยาลัยเทคนิคยะลา"</h5>
+                        <p class="text-muted">สังกัดกรมอาชีวศึกษา กระทรวงศึกษาธิการ และเริ่มเปิดสอนในระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">ปัจจุบัน</span>
+                        <h5 class="fw-bold mt-1">ศูนย์กลางอาชีวศึกษาจังหวัดชายแดนภาคใต้</h5>
+                        <p class="text-muted">มุ่งพัฒนาผู้เรียนด้วยเทคโนโลยีสมัยใหม่ มีความร่วมมือกับสถานประกอบการชั้นนำทั้งในและ
